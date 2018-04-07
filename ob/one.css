@@ -1,0 +1,225 @@
+img{
+    -moz-user-select: none;
+}
+/*导航定位*/
+#navClass{
+    
+ box-shadow:0 2px  0 rgba(82,168,236,.8);
+ -moz-box-shadow:0 2px  0 rgba(82,168,236,.8);
+ -webkit-box-shadow:0 2px 0 rgba(82,168,236,.8);
+
+}
+.navbar-left{
+    margin-left:50px;
+    margin-right:70px;
+}
+.navbar-right li{
+    margin-right:50px;
+}
+.navbar-nav li{
+    margin-left:30px;
+}
+.logo-img{
+    margin-left:30px;
+    margin-top:10px;
+    max-height:28px;
+}
+/*#navClass{
+    opacity: 0.9;
+}
+*/
+/*以上导航定位*/
+
+/*导航颜色*/
+/*.navbar-navBackground{
+    background-color:rgba(0, 188, 212, 0.57)
+}*/
+/*以上导航颜色*/
+/*响应式图片图片*/
+.bgw img{
+   width: 100%; 
+}
+/*.Pimg img{
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 20px;    
+}*/
+/*响应式图片图片以上*/
+.blackTop{
+    margin-top: 50px;
+}
+/*正文开始:文字主题*/
+.TextSubject{
+    margin-top:130px;
+}
+.TextSubject a:hover{
+    /*color: #337cb7;*/
+    color:#7bdff5;
+    text-decoration:none;
+}
+.TextSubject textarea{
+    resize: none;
+    margin:20px;  
+    padding-top:10px;
+    opacity: 0;
+}
+.TextSubject a{
+    text-align: center;
+    font-style: none;
+    font-size: 24px;
+}
+.TextSubject .LR{
+    line-height: 10em;
+    overflow: hidden;   
+}
+
+/*以上文字主题*/
+
+
+/*jq主题*/
+.JQubject{
+     margin-top:180px;
+}
+#dImg{
+    margin-top:50px;
+    margin-left:-100px;
+    opacity: 0;
+}
+#dImg img{
+    padding: 15px;
+    border-radius:20px;
+}
+
+.che{
+    float:right;
+    margin-top:50px;
+    font-size:28px;
+    color: #0ff;
+}
+/*以上jq主题*/
+
+/*游戏开始*/
+
+.play{
+    position: relative;
+     margin:150px 0 0 0;
+}
+#banner{
+    position: relative;
+    left:50%;
+    right:50%;
+    display: none;
+    margin:200px 225px 0 -350px;
+    width: 700px;
+    height: 450px;
+    border:solid #0ff 2px;
+}
+/*#banner::after{
+    content:"";
+    display: block;
+    clear:both;
+    margin:0 0 500px 0;
+}*/
+.bottom{/*//长条*/
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    height: 6px;
+    width: 60px;
+    background: green;
+}
+.qmove{/*//球球*/
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius:50%;
+    background: red;
+}
+.target {/*上方砖头区*/
+    position: relative;
+    margin-top:50px;
+    margin-left:50px;
+    height:220px;
+    width: 600px;
+    padding-left:20px;
+    padding-top:20px;
+}
+.target span{
+    position: absolute;
+    height:20px;
+    width: 54px;
+    margin: 6px;
+    background: #956;
+    border-radius: 6px;
+}
+.html{
+    display: none;
+    font-size: 26px;
+    color:#0ff;
+    position: absolute;
+    top: 0px;
+}
+#html{
+    font-size: 33px;
+    color:#0ff;
+    top: 0px;
+}
+.html2{
+    position: absolute;
+    display: block;
+    border:1px #489 dashed;
+    padding: 20px;
+    width:220px;
+    font-size: 20px;
+    color:#0ff;
+}
+/*游戏结束*/
+/*up*/
+.fixed{
+    display: none;
+    position:fixed;
+    bottom:2%;
+    right:2%;
+    height: 40px;
+    width: 30px;
+    overflow: hidden;
+    cursor:pointer;
+}
+.fixed img{
+    height: 40px;
+    width: 30px;
+    opacity:0.7;
+}
+.fixed img:hover{
+    opacity:1;
+}
+/*up end*/
+/*footer start*/
+
+.footer{
+    position: relative;
+    bottom:0;
+    width: 100%;
+    height: 333px;
+    margin:200px 0 0;
+    background:rgba(125,125,125,0.5)
+}
+.f_l{
+    float:left;
+    margin:50px 6% 0;
+    line-height: 88px;
+}
+.f_r{
+    float:right;
+    margin:50px 9% 0;
+    line-height: 88px;
+}
+.f_f{
+    position:absolute;
+    bottom:15px;
+    left:0;
+    right: 0;
+    text-align:center;
+}

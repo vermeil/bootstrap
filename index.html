@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <!-- ie兼容 -->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+          <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- ie兼容 -->
+    <title>2333</title>
+    <link rel="stylesheet" type="text/css" href="ob/one.css">           
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<!-- 导航开始 default 默认颜色  inverse 反色-->
+    <nav class="navbar navbar-default navbar-fixed-top" id="navClass">
+        <div class="navbar-heade">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="nav navbar-nav">
+                 <img class="navbar-left logo-img" src="http://www.iconpng.com/download/png/100891" alt="假装有logo">
+                <li class="active"><a href="./index.html">主页</a></li>
+                <li><a href="./two.html">二</a></li>
+                <li><a href="">未知</a></li>
+                <li><a href="">未知</a></li>
+                <li><a href="">未知</a></li>
+            </ul> 
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">一个小站</a></li>
+            </ul> 
+        </div>
+    </nav>
+<!-- 导航结束 -->   
+<!-- 惯例-大照片 开始 -->
+    <div id="carousel-example-generic" class="carousel slide blackTop" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner bgw" role="listbox">
+        <div class="item active">
+          <img src="img/bg2.jpg" alt="...">
+        </div>
+        <div class="item">
+          <img src="img/bg1.jpg" alt="...">
+        </div>
+        <div class="item">
+          <img src="img/bg4.jpg" alt="...">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+<!-- 惯例-大照片 结束 -->
+<!-- 一:欢迎开始 -->
+    <div class="page-header ">
+        <div class="container hello1">
+            <h1 align="center">1</h1>
+            <p  align="center">2</p>
+        </div>
+    </div>
+<!-- 一:欢迎结束 -->
+<!-- 二:text-开始 -->
+<!-- <div class="jumbotron">←→  ↑↓-->
+    <div class="container">
+        <div class="TextSubject">
+            <blockquote>
+                <h2>3</h2>
+                <p>&nbsp;</p>
+                <p>4,就是它的全部.</p>
+                <p>5</p>
+                <p>&nbsp;</p>
+                <footer  class="text-right col-md-12 hidden-sm hidden-xs">ps:下面输入,左侧同步</footer>
+                <footer  class="text-right hidden-lg hidden-md col-sm-12 col-xs-12">ps:下下面输入,下侧同步</footer>
+            </blockquote>
+            
+            <div class="row">
+                <textarea class="col-md-5 col-sm-11 col-xs-11 " name="" id="GetT" rows="10" label="我能显示右边的字" readonly></textarea>
+                <a class="col-md-1 hidden-sm hidden-xs LR">←</a>
+                <a class="hidden-lg hidden-md col-sm-12 col-xs-12">↑</a>
+                <textarea class="col-md-5 col-sm-11 col-xs-11 " name="" id="SetT" rows="10" 
+                label="优雅的敲着代码" ></textarea>
+                <!-- placeholder和label  为了IE没法..-->
+            </div>
+        </div>
+    </div>
+<!-- 二:text-结束 -->
+<!-- 三:jq 开始-->
+    <div class="container">
+        <div class="JQubject">
+            <blockquote>
+                <h1>6</h1>
+                <p>&nbsp;</p>
+                <p>7</p>
+                <p>8</p>
+                <p>&nbsp;</p>
+                 <footer  class="text-right col-md-12 hidden-sm hidden-xs">ps:点击图片,飞入你的购物车</footer>
+                <footer  class="text-right hidden-lg hidden-md col-sm-12 col-xs-12">ps:点击下面图片,飞入你的购物车 </footer>
+            </blockquote>
+            <div id="dImg">
+                <div class="row col-md-12">
+                    <ul class="thumbnail col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                        <img src="img/mui/1.jpg">
+                    </ul>
+                    <ul class="thumbnail col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                        <img src="img/mui/2.jpg">
+                    </ul>
+                </div> 
+                <div class="row col-md-12">
+                    <ul class="thumbnail col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                        <img src="img/mui/3.jpg">
+                    </ul>
+                    <ul class="thumbnail col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                        <img src="img/mui/4.jpg">
+                    </ul>
+                    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12">
+                    <a align='center' class="btn btn-default che" >已经剁<span id="che">0</span>只爪</a>  
+                </div>  
+                </div> 
+            </div>
+        </div>
+    </div>
+<!-- 三:jq 结束-->
+<!-- 四:play 开始 -->
+
+<div class="container play">
+    <div class="page-header bannerT">
+          <blockquote>
+            <h1>9</h1>
+            <p>&nbsp;</p>
+            <p>10</p>
+            <p>11</p>
+            <footer  class="text-right col-md-12 col-sm-12 hidden-xs">ps:如果你没有看到,那可能是你的屏幕太小~~ (PC端)</footer>
+            <footer  class="text-right hidden-lg hidden-md hidden-sm col-xs-12">
+            ps:暂时只支持PC端
+            </footer>
+        </blockquote>
+    </div>
+    <div id="banner" class="col-lg-12 col-md-12 hidden-sm hidden-xs ">
+        <div class="html"><span>还剩</span><span id="html">MAX</span>个</div>
+        <div class="html2">bug~test</div>
+        <div class="top">
+            <div class="target">
+            </div>
+        </div>
+        <div class="bottom"></div>
+        <div class="qmove"></div>
+    </div>
+</div>
+<!-- 四:play 结束 -->
+<!-- 绝对定位的up 开始 -->
+    <div class="fixed ">
+        <img src="img/up.png" alt="回到顶部">
+    </div>
+<!-- 绝对定位的up 结束 -->
+
+<!-- footer 开始 -->
+    <div class="footer container-fluid">
+        <div class="f_l">123</div>
+        <div class="f_r">321</div>
+        <div class="f_f">123</div>
+    </div>
+<!-- footer 结束 -->
+
+
+<script src="js/jquery.min.js"></script>    <!-- jq -->
+<script src="js/bootstrap.min.js"></script> <!-- 响应式bootstrap 轮播框架 -->
+<script src="js/move.js"></script>          <!-- 运动框架 -->
+<script src="js/index.js"></script>          <!-- js -->
+</body>
+</html>
