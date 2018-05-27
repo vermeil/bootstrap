@@ -127,7 +127,9 @@ $('#dImg').find('img').click(function(){
     });
 });
 //jq结束
+(function(){
 
+var ran = (max,min) => (Math.random()*(max-min)+min);
 //砖头来袭
 var zdivs =[];//用于存储所有的砖块div
 window.onload=function(){
@@ -135,25 +137,52 @@ window.onload=function(){
     var m = document.getElementsByClassName("target")[0];
     for(var i=1;i<=9;i++){
         for(var j=0;j<i;j++){
+
             var di1 = document.createElement("span");
             m.appendChild(di1);
+
+            var col = `rgba(${~~ran(255,5)},${~~ran(255,5)},${~~ran(255,5)},${ran(1,0.8)})`
+            di1.style.backgroundColor = col;
+
             di1.style.top = y+(i-1)*30+'px';
             di1.style.left= x+300-i*40+j*75+'px';
-            zdivs[zdivs.length]=di1;}}}
+            zdivs[zdivs.length]=di1;
 
-var HT1 = document.getElementsByClassName('html')[0];
-var HT2 = document.getElementsByClassName('html2')[0];
-var oBannerT = document.getElementsByClassName('bannerT')[0];//欢迎啊
-var oBanner =document.getElementById('banner');   //大框框
-// var oTop = document.getElementById('ban9ner');
-var oQmove = document.getElementsByClassName('qmove')[0];      //球球
 
-var oBottom = document.getElementsByClassName('bottom')[0];    //长条
-var oTarget = document.getElementsByClassName('target')[0];    //工头
-var zz = oTarget.getElementsByTagName('span');       //砖头们
+        }}}
+
+// var HT1 = document.getElementsByClassName('html')[0];
+// var HT2 = document.getElementsByClassName('html2')[0];
+// var oPl = document.getElementsByClassName('play')[0];//欢迎啊
+// var oBannerT = document.getElementsByClassName('bannerT')[0];//欢迎啊
+// var oBanner =document.getElementById('banner');   //大框框
+// // var oTop = document.getElementById('ban9ner');
+// var oQmove = document.getElementsByClassName('qmove')[0];      //球球
+
+// var oBottom = document.getElementsByClassName('bottom')[0];    //长条
+// var oTarget = document.getElementsByClassName('target')[0];    //工头
+// var zz = oTarget.getElementsByTagName('span');       //砖头们
+
+
+var p = function(cn,index){
+    return document.getElementsByClassName(cn)[index];
+}
+
+ var HT1 = p('html',0),
+     HT2 = p('html2',0),
+     oPl = p('play',0),//欢迎啊
+     oBannerT = p('bannerT',0),//欢迎啊
+     oBanner = document.getElementById('banner'),   //大框框
+    // var oTop = document.getElementById('ban9ner');
+     oQmove = p('qmove',0),   //球球
+     oBottom = p('bottom',0),  //长条
+     oTarget = p('target',0),   //工头
+     zz = oTarget.getElementsByTagName('span');       //砖头们
+
+
 
  $(document).on('scroll',{name:'jqI'},function( z ){
-        var jsMax = oBannerT.offsetTop - H*3/5;
+        var jsMax = oPl.offsetTop - H*2/5;
         var T = getPos().scrollT;
             if(jsMax<T){
                 oBanner.style.display='block';
@@ -162,7 +191,7 @@ var zz = oTarget.getElementsByTagName('span');       //砖头们
             }
   });
 
-document.onkeydown = function(even){
+document.onkeydown = function(ev){
     HT1.style.display='block';
     HT2.style.display='none';
     var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
@@ -184,11 +213,25 @@ document.onkeydown = function(even){
     if(keyCode == 32){
             var zzzz = zz.length;
             if(zzzz>44){
-            Qmove(oQmove);
+                Qmove(oQmove);
             }
             return false;
     }
 }
+
+
+function getStyle(obj, name)           //非行间样式
+{
+    if(obj.currentStyle)
+    {
+        return obj.currentStyle[name];
+    }
+    else
+    {
+        return getComputedStyle(obj, false)[name];
+    }
+}
+
 
 function Qmove(obj){
      var x = 3;
@@ -247,22 +290,26 @@ function Qmove(obj){
             // var ot = this.children;
             // console.log(zl);
             // console.log(zt+'gg');
-                    oTarget.removeChild(zz[i]);
+              HTI.style.color = oBanner.style.borderColor = getStyle(zz[i],'backgroundColor');
+              oTarget.removeChild(zz[i]);
 
-                  y=-y;
+              y=-y;
               HTI.innerHTML=zz.length;
             }
             if(zz.length<=0){
                 clearInterval(timer);
-                HTI.innerHTML ="玄学";
+                HTI.innerHTML ="MIN";
             }
         }
         if(t>=bmaxH+10){
             clearInterval(timer);
+            oBanner.style.borderColor = HT1.style.color = '#f00';
+            obj.style.display = 'none';
+            document.onkeydown = null;
             HT1.innerHTML ="游戏结束";
         }
     },50/3)
 }
-document.title = $('#mynavbar .active').text();
 
+})()
 //砖头打完了
