@@ -210,16 +210,16 @@ function Qmove(obj){
         //球在框框的高度最大值
         obj.style.left = obj.offsetLeft + x + "px";
         l+=x;
-        if(0>=l){
+        if(0>l){
             x=-x;
         }
-        if(l>=bmaxW){
+        if(l>bmaxW){
             x=-x;
         }
 
         obj.style.top = obj.offsetTop + y + "px";
         t+=y;
-        if(t<=0){
+        if(t<0){
             y=-y;
         }
 
